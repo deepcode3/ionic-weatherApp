@@ -1,3 +1,46 @@
-<ion-app>
-  <ion-router-outlet></ion-router-outlet>
+<ion-app class="main">
+  <ion-menu menuId="main-menu" content-id="main">
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle>
+          <ion-item routerLink="home">
+            <ion-icon name="home" slot="start"></ion-icon>
+            <ion-label>Home</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="/favorite">
+            <ion-icon name="heart" slot="start"></ion-icon>
+            <ion-label>Favorites</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="/recent">
+            <ion-icon name="archive" slot="start"></ion-icon>
+            <ion-label>Recent Search</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
+
+  <!-- <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="tab3" href="/tabs/tab1">
+        <ion-icon aria-hidden="true" name="triangle"></ion-icon>
+        <ion-label>Tab 1</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="tab3" href="/tabs/tab2">
+        <ion-icon aria-hidden="true" name="ellipse"></ion-icon>
+        <ion-label>Tab 2</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="tab3" href="/tabs/tab3">
+        <ion-icon aria-hidden="true" name="square"></ion-icon>
+        <ion-label>Tab 3</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs> -->
 </ion-app>

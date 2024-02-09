@@ -1,0 +1,144 @@
+ion-content {
+    // --background: url('../../../assets/icon/background_android.png') no-repeat center center fixed;
+    --background-size: cover;
+    --background: linear-gradient(
+      to top right,
+      rgb(97, 118, 212),
+      rgb(126, 83, 160)
+    );
+    --padding:10px;
+}
+.bg{
+    background-color: white;
+}
+.card {
+    background: rgba(255,255,255,0.1);
+    box-shadow: none;
+}
+.row-title-text{
+    color: #FFFFFF;
+    font-family: 'Roboto';
+    font-size: 13px;
+    letter-spacing: 0;
+    line-height: 15px;
+    padding: 7px;
+}
+.row-text{
+    color: #FFFFFF;
+    font-family: 'Roboto';
+    font-size: 13px;
+    letter-spacing: 0;
+    line-height: 15px;
+}
+.weather-icon{
+    height: 26px;
+    width: 26px;
+}
+.content{
+    display: flex;
+    align-items: center;
+}
+.centered-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.temp-text {
+    color: #FFFFFF;
+    font-family: "Roboto";
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 16px;
+    margin-left: 4px;
+}
+.place{
+    color: #FFE539;
+    font-family: "Roboto";
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 18px;
+}
+.noData-box{
+    position: relative;
+    top: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.no-data{
+    color: #FFFFFF;
+    font-family: "Roboto";
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 21px;
+    text-align: center;  
+    margin-top: 10px;
+}
+.ion-popover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    height: 100%;
+  }
+.popover{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 138px;
+    width: 280px;
+    border-radius: 2px;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 24px 0 rgba(0,0,0,0.22), 0 24px 24px 0 rgba(0,0,0,0.3);
+  } 
+  .opt-box{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-between;
+    width: 40%;
+  } 
+.q-text{
+    color: rgba(0,0,0,0.54);
+    font-family: "Roboto";
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 24px;  
+    padding-left: 9px;
+}
+.opt-text{
+    color: #673AB7;
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    line-height: 16px;
+    text-align: center;
+}
+  
+
+//
+// ion-modal .custom-popover  {
+//     --width: 200px; 
+//     --height: 200px; 
+//     --top: calc(20% - var(--height) / 2);
+//     --left: calc(20% - var(--width) / 2);
+//     position: absolute;
+//     top: var(--top);
+//     left: var(--left);
+//     width: var(--width);
+//     height: var(--height);
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     background-color: rgb(191, 57, 57) !important;
+//     border-radius: 8px; 
+//     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
+//   }
+
+
+  

@@ -1,0 +1,51 @@
+<ion-content [fullscreen]="true" class="content-container">
+  <div id="container" class="container">
+    <div class="header">
+      <ion-buttons slot="start">
+        <ion-menu-button menu="main-menu"></ion-menu-button>
+      </ion-buttons>
+      <!-- <img src="../../../assets/icon/icon_menu_white.png" alt="menu" /> -->
+      <img src="../../../assets/icon/logo.png" alt="logo" />
+      <ion-icon
+        (click)="search()"
+        routerLink="/search"
+        name="search"
+      ></ion-icon>
+      <!-- <img src="../../../assets/icon/icon_search_white.png" alt="search" /> -->
+    </div>
+    <div class="loc-container">
+      <p class="date-text">{{getDate}}</p>
+      <p class="location-text">
+        {{ weatherData?.name}},{{ weatherData?.sys?.country}}
+      </p>
+      <div class="fav">
+        <img
+          [src]="'../../../assets/icon/'+(isFavorite ? 'icon_favourite_active' : 'icon_favourite_inactive')+'.png'"
+          alt="heart"
+          (click)="toggleFavorite()"
+        />
+        <p class="fav-text">Add to favourite</p>
+      </div>
+    </div>
+    <div class="info-container">
+      <img class="weather-icon" [src]="getWeatherIcon()" alt="heart" />
+      <div class="temp">
+        <p class="temp-text">{{weatherData?.main?.temp}}</p>
+        <div class="temp" (click)="toggleUnits()">
+          <span [ngClass]="{'active-unit':isCelsius,'inactive-unit':!isCelsius}"
+            >&#x1D3C;C</span
+          >
+          <span [ngClass]="{'active-unit':!isCelsius,'inactive-unit':isCelsius}"
+            >&#x1D3C;F</span
+          >
+        </div>
+      </div>
+      <span class="weather-status"
+        >{{weatherData?.weather[0]?.description}}
+      </span>
+    </div>
+    <div class="details">
+      <app-weather-details [weatherData]="weatherData"></app-weather-details>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,49 @@
+ion-content{
+   // --background: url('../../../assets/icon/background_android.png') no-repeat center center fixed;
+    --background-size: cover;
+    --background:linear-gradient(to left right, rgb(97, 118, 212), rgb(126, 83, 160));
+    height: 100px;
+}
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: scroll; 
+    white-space: nowrap;
+    padding-top: 30px;
+    border-top: 2px solid rgb(175,166,222);
+}
+.scroller{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 80px;
+    margin: 0px 5px;
+}
+.status{
+    height: 28px;
+    width: 28px;
+}
+.right-box{
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    align-items:baseline;
+    justify-content: center;
+    flex-direction: column;
+}
+.info-text{
+    color: #FFFFFF;
+    font-family: 'Roboto';
+    font-size: 13px;
+    letter-spacing: 0;
+    line-height: 15px;
+} 
+.info-val{
+    color: #FFFFFF;
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 21px;
+}

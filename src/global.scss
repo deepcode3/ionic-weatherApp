@@ -24,3 +24,38 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+
+
+#background-content {
+    left: 0px;
+    right: 0px;
+    top: calc(var(--offset-top) * -1);
+    bottom: calc(var(--offset-bottom) * -1);
+    position: absolute;
+    background: rgb(187, 17, 17);
+}
+
+ .auto-height-for-cart-popup {
+    --height: auto;
+   
+    .modal-wrapper {
+      width: 421px !important;
+      position: fixed !important;
+      bottom: 0 !important;
+      right: 0 !important;
+      border-radius: 7px 0 0 7px !important;
+      background-color: #f8f8f8 !important;
+   
+      .ion-page {
+        position: relative;
+        contain: content;
+        max-height: 100vh;
+        overflow-y: auto;
+   
+        .modal-content {
+          overflow: auto;
+        }
+      }
+    }
+  }

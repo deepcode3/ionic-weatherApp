@@ -1,0 +1,80 @@
+ion-content {
+    // --background: url('../../../assets/icon/background_android.png') no-repeat center center fixed;
+    --background-size: cover;
+    --background: linear-gradient(
+      to top right,
+      rgb(97, 118, 212),
+      rgb(126, 83, 160)
+    );
+    --padding:10px;
+}
+.bg{
+    background-color: white;
+}
+.card {
+    background: rgba(255,255,255,0.1);
+    box-shadow: none;
+}
+.row-title-text{
+    color: #FFFFFF;
+    font-family: 'Roboto';
+    font-size: 13px;
+    letter-spacing: 0;
+    line-height: 15px;
+    padding: 7px;
+}
+.row-text{
+    color: #FFFFFF;
+    font-family: 'Roboto';
+    font-size: 13px;
+    letter-spacing: 0;
+    line-height: 15px;
+}
+.weather-icon{
+    height: 26px;
+    width: 26px;
+}
+.content{
+    display: flex;
+    align-items: center;
+}
+.centered-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.temp-text {
+    color: #FFFFFF;
+    font-family: "Roboto";
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 16px;
+    margin-left: 4px;
+}
+.place{
+    color: #FFE539;
+    font-family: "Roboto";
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 18px;
+}
+.noData-box{
+    position: relative;
+    top: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.no-data{
+    color: #FFFFFF;
+    font-family: "Roboto";
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 21px;
+    text-align: center;  
+    margin-top: 10px;
+}
+
+  

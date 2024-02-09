@@ -1,0 +1,135 @@
+ion-content {
+  // --background: url('../../../assets/icon/background_android.png') no-repeat center center fixed;
+  --background-size: cover;
+  --background: linear-gradient(
+    to top right,
+    rgb(97, 118, 212),
+    rgb(126, 83, 160)
+  );
+}
+ion-header {
+  --background: transparent; /* Set header background to transparent */
+}
+ion-tab-bar {
+  //--background: url('../assets/icon/background_android.png') no-repeat center center fixed;
+  --background-size: cover;
+  // --background: linear-gradient(to left right, rgb(97, 118, 212), rgb(126, 83, 160));
+  border: 2px solid rgb(142, 149, 204);
+  height: 150px;
+}
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.container {
+  flex: 1;
+}
+
+#container.center-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-top: 20px;
+}
+.header {
+  padding: 10px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.date-text {
+  opacity: 0.6;
+  color: #ffffff;
+  font-family: "Roboto";
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  line-height: 15px;
+  text-align: center;
+}
+.location-text {
+  color: #ffffff;
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 21px;
+  text-align: center;
+}
+.fav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.fav-text {
+  margin-left: 4px;
+  color: #ffffff;
+  font-family: "Roboto";
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 15px;
+}
+.loc-container {
+  margin-top: 40px;
+}
+.info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+}
+.weather-icon {
+  height: 67px;
+  width: 64px;
+}
+.temp {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 80px;
+}
+.temp-text {
+  color: #ffffff;
+  font-family: "Roboto";
+  font-size: 52px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 61px;
+}
+.inactive-unit {
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  font-family: "Roboto";
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 19px;
+  padding: 4px;
+}
+.active-unit {
+  color: #e32843;
+  font-family: "Roboto";
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 19px;
+  background-color: white;
+  padding: 5px;
+}
+.weather-status {
+  color: #ffffff;
+  color: #FFFFFF;
+  font-family: "Roboto";
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 21px;
+  text-align: center;
+
+}
+.details {
+  margin-top: 200px;
+}

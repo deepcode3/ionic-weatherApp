@@ -1,0 +1,16 @@
+<ion-content>
+  <div class="box">
+    <div class="scroller" *ngFor="let detail of details">
+      <div class="status">
+        <img
+          [src]="'../../../../assets/icon/'+detail.icon+'.png'"
+          alt="status"
+        />
+      </div>
+      <div class="right-box">
+        <span class="info-text">{{detail.name}}</span>
+        <span class="info-val">{{detail.value}}</span>
+      </div>
+    </div>
+  </div>
+</ion-content>

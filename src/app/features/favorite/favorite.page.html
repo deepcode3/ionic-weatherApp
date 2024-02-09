@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-row class="header-row bg">
+    <ion-col size="1" routerLink="/home">
+      <ion-toolbar><ion-icon name="arrow-back-outline"></ion-icon></ion-toolbar>
+    </ion-col>
+    <ion-col size="10" class="ion-text-center">
+      <ion-toolbar>Favourite</ion-toolbar>
+    </ion-col>
+    <ion-col size="1" class="ion-text-end">
+      <ion-toolbar>
+        <ion-icon routerLink="/search" name="search"></ion-icon>
+      </ion-toolbar>
+    </ion-col>
+  </ion-row>
+</ion-header>
+
+<ion-content *ngIf="!noData" [fullscreen]="true">
+  <ion-row class="row-title-text">
+    <ion-col size="8" routerLink="/home">
+      {{favData.length}} City added as favourite
+    </ion-col>
+    <ion-col
+      (click)="presentPopover($event)"
+      id="click-trigger"
+      size="4"
+      class="ion-text-end"
+    >
+      Remove All
+    </ion-col>
+    <!-- <ion-popover trigger="click-trigger" triggerAction="click">
+      <ng-template>
+        <div class="popover">
+          <span class="q-text"
+            >Are you sure want to remove all the favourites?</span
+          >
+          <div class="opt-box">
+            <span class="opt-text">No</span>
+            <span (click)="removeAll()" class="opt-text">Yes</span>
+          </div>
+        </div>
+      </ng-template>
+    </ion-popover> -->
+  </ion-row>
+
+  <ion-card class="card" *ngFor="let fav of  favData">
+    <ion-row class="row-text">
+      <ion-col size="9">
+        <ion-card-header>
+          <ion-card-subtitle class="place"
+            >{{fav?.name}},{{fav?.sys?.country}}</ion-card-subtitle
+          >
+        </ion-card-header>
+
+        <ion-card-content class="content">
+          <img class="weather-icon" [src]="getWeatherIcon(fav)" alt="icon" />
+          <span class="temp-text">{{fav?.main?.temp}}&#x1D3C;C</span>
+          <span class="temp-text">{{fav?.weather[0]?.description}}</span>
+        </ion-card-content>
+      </ion-col>
+      <ion-col size="3" class="centered-col">
+        <img
+          src="../../../assets/icon/icon_favourite_active_1.png"
+          alt="heart"
+        />
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>
+<ion-content *ngIf="noData" [fullscreen]="true">
+  <div class="noData-box">
+    <img src="../../../assets/icon/icon_nothing.png" alt="nodata" />
+    <span class="no-data">No Favourites added</span>
+  </div>
+</ion-content>
