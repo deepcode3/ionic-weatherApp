@@ -25,7 +25,7 @@ export class HomePage implements OnInit {
   constructor(
     private weatherService: WeatherService,
     private datepipe: DatePipe,
-    private route: ActivatedRoute,
+    private activateRoute: ActivatedRoute,
     private loadingCtrl: LoadingController
   ) {
     this.getDate = this.getCurrentDate();
@@ -36,7 +36,7 @@ export class HomePage implements OnInit {
     if (this.searchTerm === '') {
       this.getWeatherData('metric', 'udupi');
     }
-    this.route.queryParams.subscribe((params) => {
+    this.activateRoute.queryParams.subscribe((params) => {
       const newSearchTerm = params['searchTerm'];
 
       if (newSearchTerm) {
@@ -89,18 +89,10 @@ export class HomePage implements OnInit {
         if (data !== '') {
           localfavData = JSON.parse(data);
         }
-        console.log(localfavData);
-        this.isFavorite = localfavData.some((item: any) => {
-          console.log(
-            item.name?.toLowerCase(),
-            this.weatherData?.name?.toLowerCase()
-          );
-          return (
+        this.isFavorite = localfavData.some(
+          (item: any) =>
             item.name?.toLowerCase() === this.weatherData?.name?.toLowerCase()
-          );
-        });
-
-        console.log(this.isFavorite, this.favArray);
+        );
 
         //testing 2
         if (this.weatherData) {

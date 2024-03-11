@@ -23,7 +23,7 @@ export class WeatherService {
 
   getWeatherData(units: string, place: string): Observable<IWeatherData> {
     return this.http.get<IWeatherData>(
-      `${environment.baseURL}${ApiEndPoints.getAllData}?appid=${environment.accessKey}&q=${place}&units=${units}`
+      `${environment.baseURL}${ApiEndPoints.getAllData}?appid=${environment.accessKey}&q=${place}&units=${units}&lang=ar`
     );
   }
 }
